@@ -1,0 +1,898 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form xmlns="http://www.intellij.com/uidesigner/form/" version="1" bind-to-class="julis.wang.NoShapeDialog">
+  <grid id="27dc6" binding="contentPane" layout-manager="GridLayoutManager" row-count="2" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="0">
+    <margin top="10" left="10" bottom="10" right="10"/>
+    <constraints>
+      <xy x="27" y="111" width="439" height="531"/>
+    </constraints>
+    <properties>
+      <enabled value="true"/>
+    </properties>
+    <clientProperties>
+      <html.disable class="java.lang.Boolean" value="false"/>
+    </clientProperties>
+    <border type="line">
+      <color color="-4473925"/>
+    </border>
+    <children>
+      <grid id="82482" layout-manager="GridLayoutManager" row-count="3" column-count="3" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+        <margin top="0" left="0" bottom="0" right="0"/>
+        <constraints>
+          <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="2" hsize-policy="3" anchor="1" fill="1" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties/>
+        <border type="none"/>
+        <children>
+          <grid id="efb0c" layout-manager="GridLayoutManager" row-count="1" column-count="4" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+            <margin top="0" left="0" bottom="0" right="0"/>
+            <constraints>
+              <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="9" fill="0" indent="0" use-parent-layout="false"/>
+            </constraints>
+            <properties/>
+            <border type="line" title="Shape">
+              <color color="-4473925"/>
+            </border>
+            <children>
+              <component id="7ff34" class="javax.swing.JRadioButton" binding="rectangle">
+                <constraints>
+                  <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+                </constraints>
+                <properties>
+                  <selected value="true"/>
+                  <text value="rectangle"/>
+                </properties>
+              </component>
+              <component id="ec737" class="javax.swing.JRadioButton" binding="line">
+                <constraints>
+                  <grid row="0" column="1" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+                </constraints>
+                <properties>
+                  <text value="line"/>
+                </properties>
+              </component>
+              <component id="aafa2" class="javax.swing.JRadioButton" binding="oval">
+                <constraints>
+                  <grid row="0" column="2" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+                </constraints>
+                <properties>
+                  <text value="oval"/>
+                </properties>
+              </component>
+              <component id="fabc4" class="javax.swing.JRadioButton" binding="ring">
+                <constraints>
+                  <grid row="0" column="3" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+                </constraints>
+                <properties>
+                  <selected value="false"/>
+                  <text value="ring"/>
+                </properties>
+              </component>
+            </children>
+          </grid>
+          <grid id="9f662" layout-manager="GridLayoutManager" row-count="1" column-count="5" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+            <margin top="0" left="0" bottom="0" right="0"/>
+            <constraints>
+              <grid row="1" column="0" row-span="1" col-span="3" vsize-policy="0" hsize-policy="0" anchor="9" fill="0" indent="0" use-parent-layout="false"/>
+            </constraints>
+            <properties/>
+            <border type="line" title="Functions">
+              <font/>
+              <color color="-4473925"/>
+            </border>
+            <children>
+              <component id="b0da5" class="javax.swing.JComboBox" binding="functionComboBox">
+                <constraints>
+                  <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+                </constraints>
+                <properties/>
+              </component>
+              <component id="627b8" class="javax.swing.JCheckBox" binding="strokeCheckBox" default-binding="true">
+                <constraints>
+                  <grid row="0" column="1" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+                </constraints>
+                <properties>
+                  <text value="Stroke"/>
+                </properties>
+              </component>
+              <component id="74c37" class="javax.swing.JCheckBox" binding="cornersCheckBox" default-binding="true">
+                <constraints>
+                  <grid row="0" column="2" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+                </constraints>
+                <properties>
+                  <text value="Corners"/>
+                </properties>
+              </component>
+              <component id="c483e" class="javax.swing.JCheckBox" binding="sizeCheckBox" default-binding="true">
+                <constraints>
+                  <grid row="0" column="3" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+                </constraints>
+                <properties>
+                  <enabled value="false"/>
+                  <selected value="false"/>
+                  <text value="Size"/>
+                </properties>
+              </component>
+              <component id="2efa6" class="javax.swing.JCheckBox" binding="paddingCheckBox" default-binding="true">
+                <constraints>
+                  <grid row="0" column="4" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+                </constraints>
+                <properties>
+                  <enabled value="false"/>
+                  <text value="Padding"/>
+                </properties>
+              </component>
+            </children>
+          </grid>
+          <grid id="e6bf5" layout-manager="FlowLayout" hgap="0" vgap="0" flow-align="0">
+            <constraints>
+              <grid row="2" column="0" row-span="1" col-span="3" vsize-policy="3" hsize-policy="3" anchor="9" fill="0" indent="0" use-parent-layout="false"/>
+            </constraints>
+            <properties/>
+            <border type="none"/>
+            <children>
+              <grid id="4276d" layout-manager="GridLayoutManager" row-count="2" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+                <margin top="0" left="0" bottom="0" right="10"/>
+                <constraints/>
+                <properties>
+                  <preferredSize width="200" height="211"/>
+                </properties>
+                <border type="none"/>
+                <children>
+                  <grid id="964ea" binding="solidContainer" layout-manager="FlowLayout" hgap="5" vgap="0" flow-align="0">
+                    <constraints>
+                      <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="9" fill="0" indent="0" use-parent-layout="false">
+                        <minimum-size width="100" height="-1"/>
+                        <preferred-size width="2000" height="60"/>
+                        <maximum-size width="9999" height="-1"/>
+                      </grid>
+                    </constraints>
+                    <properties>
+                      <visible value="true"/>
+                    </properties>
+                    <border type="line" title="Solid">
+                      <color color="-4473925"/>
+                    </border>
+                    <children>
+                      <component id="31a53" class="javax.swing.JLabel">
+                        <constraints/>
+                        <properties>
+                          <text value="color"/>
+                        </properties>
+                      </component>
+                      <component id="e55c5" class="javax.swing.JTextField" binding="solidColor" custom-create="true">
+                        <constraints/>
+                        <properties>
+                          <columns value="0"/>
+                          <preferredSize width="90" height="30"/>
+                          <text value=""/>
+                        </properties>
+                      </component>
+                    </children>
+                  </grid>
+                  <grid id="5ce55" binding="strokeContainer" layout-manager="GridLayoutManager" row-count="4" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+                    <margin top="0" left="0" bottom="0" right="0"/>
+                    <constraints>
+                      <grid row="1" column="0" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="9" fill="0" indent="0" use-parent-layout="false">
+                        <minimum-size width="100" height="-1"/>
+                        <preferred-size width="200" height="-1"/>
+                        <maximum-size width="9999" height="-1"/>
+                      </grid>
+                    </constraints>
+                    <properties/>
+                    <border type="line" title="Stroke">
+                      <color color="-4473925"/>
+                    </border>
+                    <children>
+                      <grid id="94225" layout-manager="FlowLayout" hgap="5" vgap="0" flow-align="1">
+                        <constraints>
+                          <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="1" fill="1" indent="0" use-parent-layout="false">
+                            <minimum-size width="100" height="-1"/>
+                            <preferred-size width="200" height="-1"/>
+                          </grid>
+                        </constraints>
+                        <properties/>
+                        <border type="none"/>
+                        <children>
+                          <component id="e297d" class="javax.swing.JLabel">
+                            <constraints/>
+                            <properties>
+                              <text value="width        "/>
+                            </properties>
+                          </component>
+                          <component id="58ab3" class="javax.swing.JComboBox" binding="strokeWidth" custom-create="true">
+                            <constraints/>
+                            <properties>
+                              <model>
+                                <item value="0"/>
+                                <item value="0.5"/>
+                                <item value="1"/>
+                                <item value="1.5"/>
+                                <item value="2"/>
+                                <item value="2.5"/>
+                                <item value="3"/>
+                                <item value="4"/>
+                                <item value="6"/>
+                                <item value="8"/>
+                                <item value="10"/>
+                                <item value="12"/>
+                                <item value="15"/>
+                                <item value="999"/>
+                              </model>
+                            </properties>
+                          </component>
+                        </children>
+                      </grid>
+                      <grid id="3c24d" layout-manager="FlowLayout" hgap="5" vgap="0" flow-align="1">
+                        <constraints>
+                          <grid row="1" column="0" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+                        </constraints>
+                        <properties/>
+                        <border type="none">
+                          <title-color color="-4473925"/>
+                        </border>
+                        <children>
+                          <component id="9a8c4" class="javax.swing.JLabel">
+                            <constraints/>
+                            <properties>
+                              <text value="dashWidth"/>
+                            </properties>
+                          </component>
+                          <component id="4e061" class="javax.swing.JComboBox" binding="strokeDashWidth" custom-create="true">
+                            <constraints/>
+                            <properties>
+                              <model>
+                                <item value="0"/>
+                                <item value="0.5"/>
+                                <item value="1"/>
+                                <item value="1.5"/>
+                                <item value="2"/>
+                                <item value="2.5"/>
+                                <item value="3"/>
+                                <item value="4"/>
+                                <item value="6"/>
+                                <item value="8"/>
+                                <item value="10"/>
+                                <item value="12"/>
+                                <item value="15"/>
+                                <item value="999"/>
+                              </model>
+                            </properties>
+                          </component>
+                        </children>
+                      </grid>
+                      <grid id="d42a5" layout-manager="FlowLayout" hgap="5" vgap="0" flow-align="1">
+                        <constraints>
+                          <grid row="2" column="0" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+                        </constraints>
+                        <properties/>
+                        <border type="none"/>
+                        <children>
+                          <component id="8619b" class="javax.swing.JLabel">
+                            <constraints/>
+                            <properties>
+                              <text value="dashGap   "/>
+                            </properties>
+                          </component>
+                          <component id="337e2" class="javax.swing.JComboBox" binding="strokeDashGap" custom-create="true">
+                            <constraints/>
+                            <properties>
+                              <model>
+                                <item value="0"/>
+                                <item value="0.5"/>
+                                <item value="1"/>
+                                <item value="1.5"/>
+                                <item value="2"/>
+                                <item value="2.5"/>
+                                <item value="3"/>
+                                <item value="4"/>
+                                <item value="6"/>
+                                <item value="8"/>
+                                <item value="10"/>
+                                <item value="12"/>
+                                <item value="15"/>
+                                <item value="999"/>
+                              </model>
+                            </properties>
+                          </component>
+                        </children>
+                      </grid>
+                      <grid id="57b2c" layout-manager="FlowLayout" hgap="5" vgap="0" flow-align="1">
+                        <constraints>
+                          <grid row="3" column="0" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="9" fill="0" indent="0" use-parent-layout="false"/>
+                        </constraints>
+                        <properties/>
+                        <border type="none"/>
+                        <children>
+                          <component id="474e3" class="javax.swing.JLabel">
+                            <constraints/>
+                            <properties>
+                              <text value=" color         "/>
+                            </properties>
+                          </component>
+                          <component id="1d7a5" class="javax.swing.JTextField" binding="strokeColor" custom-create="true">
+                            <constraints/>
+                            <properties>
+                              <preferredSize width="92" height="30"/>
+                              <text value=""/>
+                            </properties>
+                          </component>
+                        </children>
+                      </grid>
+                    </children>
+                  </grid>
+                </children>
+              </grid>
+              <grid id="96cb1" binding="cornersContainer" layout-manager="GridLayoutManager" row-count="2" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="0" vgap="-1">
+                <margin top="0" left="5" bottom="0" right="0"/>
+                <constraints/>
+                <properties>
+                  <autoscrolls value="false"/>
+                  <minimumSize width="200" height="212"/>
+                </properties>
+                <border type="line" title="Corners">
+                  <color color="-4473925"/>
+                </border>
+                <children>
+                  <grid id="62697" layout-manager="GridLayoutManager" row-count="2" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+                    <margin top="0" left="0" bottom="0" right="0"/>
+                    <constraints>
+                      <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="8" fill="2" indent="0" use-parent-layout="false">
+                        <preferred-size width="190" height="30"/>
+                      </grid>
+                    </constraints>
+                    <properties>
+                      <toolTipText value="#5dp"/>
+                    </properties>
+                    <border type="none">
+                      <font/>
+                    </border>
+                    <children>
+                      <grid id="8c4e4" layout-manager="FlowLayout" hgap="0" vgap="0" flow-align="0">
+                        <constraints>
+                          <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="8" fill="2" indent="0" use-parent-layout="false"/>
+                        </constraints>
+                        <properties/>
+                        <border type="none"/>
+                        <children>
+                          <component id="83173" class="javax.swing.JLabel">
+                            <constraints/>
+                            <properties>
+                              <text value="   radius         "/>
+                            </properties>
+                          </component>
+                          <component id="ce6a4" class="javax.swing.JComboBox" binding="cornersRadius" custom-create="true">
+                            <constraints/>
+                            <properties>
+                              <model>
+                                <item value="0"/>
+                                <item value="0.5"/>
+                                <item value="1"/>
+                                <item value="1.5"/>
+                                <item value="2"/>
+                                <item value="2.5"/>
+                                <item value="3"/>
+                                <item value="4"/>
+                                <item value="6"/>
+                                <item value="8"/>
+                                <item value="10"/>
+                                <item value="12"/>
+                                <item value="15"/>
+                                <item value="999"/>
+                              </model>
+                              <preferredSize width="60" height="30"/>
+                            </properties>
+                          </component>
+                        </children>
+                      </grid>
+                      <grid id="f7368" layout-manager="FlowLayout" hgap="0" vgap="0" flow-align="0">
+                        <constraints>
+                          <grid row="1" column="0" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="8" fill="2" indent="0" use-parent-layout="false">
+                            <preferred-size width="190" height="30"/>
+                          </grid>
+                        </constraints>
+                        <properties>
+                          <toolTipText value="#5dp"/>
+                        </properties>
+                        <border type="none">
+                          <font/>
+                        </border>
+                        <children>
+                          <component id="3ae5f" class="javax.swing.JCheckBox" binding="cornerDetailCheckBox">
+                            <constraints/>
+                            <properties>
+                              <text value="cornersDetail"/>
+                            </properties>
+                          </component>
+                        </children>
+                      </grid>
+                    </children>
+                  </grid>
+                  <grid id="99ed3" binding="cornersDetailContainer" layout-manager="GridLayoutManager" row-count="4" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+                    <margin top="3" left="5" bottom="0" right="0"/>
+                    <constraints>
+                      <grid row="1" column="0" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="8" fill="0" indent="0" use-parent-layout="false">
+                        <preferred-size width="180" height="129"/>
+                      </grid>
+                    </constraints>
+                    <properties>
+                      <enabled value="true"/>
+                      <visible value="true"/>
+                    </properties>
+                    <border type="line">
+                      <color color="-4473925"/>
+                    </border>
+                    <children>
+                      <grid id="a7f44" layout-manager="FlowLayout" hgap="0" vgap="0" flow-align="0">
+                        <constraints>
+                          <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="8" fill="2" indent="0" use-parent-layout="false">
+                            <preferred-size width="190" height="30"/>
+                          </grid>
+                        </constraints>
+                        <properties>
+                          <toolTipText value="#5dp"/>
+                        </properties>
+                        <border type="none">
+                          <font/>
+                        </border>
+                        <children>
+                          <component id="87c87" class="javax.swing.JLabel">
+                            <constraints/>
+                            <properties>
+                              <text value="topLeftRadius        "/>
+                            </properties>
+                          </component>
+                          <component id="469ac" class="javax.swing.JComboBox" binding="cornersTopLeft" custom-create="true">
+                            <constraints/>
+                            <properties>
+                              <minimumSize width="60" height="30"/>
+                              <model>
+                                <item value="0"/>
+                                <item value="0.5"/>
+                                <item value="1"/>
+                                <item value="1.5"/>
+                                <item value="2"/>
+                                <item value="2.5"/>
+                                <item value="3"/>
+                                <item value="4"/>
+                                <item value="6"/>
+                                <item value="8"/>
+                                <item value="10"/>
+                                <item value="12"/>
+                                <item value="15"/>
+                                <item value="999"/>
+                              </model>
+                              <preferredSize width="60" height="30"/>
+                            </properties>
+                          </component>
+                        </children>
+                      </grid>
+                      <grid id="6de9e" layout-manager="FlowLayout" hgap="0" vgap="0" flow-align="0">
+                        <constraints>
+                          <grid row="1" column="0" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="8" fill="2" indent="0" use-parent-layout="false">
+                            <preferred-size width="190" height="30"/>
+                          </grid>
+                        </constraints>
+                        <properties>
+                          <toolTipText value="#5dp"/>
+                        </properties>
+                        <border type="none">
+                          <font/>
+                        </border>
+                        <children>
+                          <component id="44ed2" class="javax.swing.JLabel">
+                            <constraints/>
+                            <properties>
+                              <text value="topRightRadius      "/>
+                            </properties>
+                          </component>
+                          <component id="8d65" class="javax.swing.JComboBox" binding="cornersTopRight" custom-create="true">
+                            <constraints/>
+                            <properties>
+                              <minimumSize width="60" height="30"/>
+                              <model>
+                                <item value="0"/>
+                                <item value="0.5"/>
+                                <item value="1"/>
+                                <item value="1.5"/>
+                                <item value="2"/>
+                                <item value="2.5"/>
+                                <item value="3"/>
+                                <item value="4"/>
+                                <item value="6"/>
+                                <item value="8"/>
+                                <item value="10"/>
+                                <item value="12"/>
+                                <item value="15"/>
+                                <item value="999"/>
+                              </model>
+                              <preferredSize width="60" height="30"/>
+                            </properties>
+                          </component>
+                        </children>
+                      </grid>
+                      <grid id="80639" layout-manager="FlowLayout" hgap="0" vgap="0" flow-align="0">
+                        <constraints>
+                          <grid row="2" column="0" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="8" fill="2" indent="0" use-parent-layout="false">
+                            <preferred-size width="190" height="30"/>
+                          </grid>
+                        </constraints>
+                        <properties>
+                          <toolTipText value="#5dp"/>
+                        </properties>
+                        <border type="none">
+                          <font/>
+                        </border>
+                        <children>
+                          <component id="7f902" class="javax.swing.JLabel">
+                            <constraints/>
+                            <properties>
+                              <text value="bottomLeftRadius  "/>
+                            </properties>
+                          </component>
+                          <component id="c8060" class="javax.swing.JComboBox" binding="cornersBottomLeft" custom-create="true">
+                            <constraints/>
+                            <properties>
+                              <minimumSize width="60" height="30"/>
+                              <model>
+                                <item value="0"/>
+                                <item value="0.5"/>
+                                <item value="1"/>
+                                <item value="1.5"/>
+                                <item value="2"/>
+                                <item value="2.5"/>
+                                <item value="3"/>
+                                <item value="4"/>
+                                <item value="6"/>
+                                <item value="8"/>
+                                <item value="10"/>
+                                <item value="12"/>
+                                <item value="15"/>
+                                <item value="999"/>
+                              </model>
+                              <preferredSize width="60" height="30"/>
+                            </properties>
+                          </component>
+                        </children>
+                      </grid>
+                      <grid id="2aae0" layout-manager="FlowLayout" hgap="0" vgap="0" flow-align="0">
+                        <constraints>
+                          <grid row="3" column="0" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="8" fill="2" indent="0" use-parent-layout="false">
+                            <preferred-size width="190" height="30"/>
+                          </grid>
+                        </constraints>
+                        <properties>
+                          <toolTipText value="#5dp"/>
+                        </properties>
+                        <border type="none">
+                          <font/>
+                        </border>
+                        <children>
+                          <component id="da550" class="javax.swing.JLabel">
+                            <constraints/>
+                            <properties>
+                              <text value="bottomRightRadius"/>
+                            </properties>
+                          </component>
+                          <component id="2b781" class="javax.swing.JComboBox" binding="cornersBottomRight" custom-create="true">
+                            <constraints/>
+                            <properties>
+                              <minimumSize width="60" height="30"/>
+                              <model>
+                                <item value="0"/>
+                                <item value="0.5"/>
+                                <item value="1"/>
+                                <item value="1.5"/>
+                                <item value="2"/>
+                                <item value="2.5"/>
+                                <item value="3"/>
+                                <item value="4"/>
+                                <item value="6"/>
+                                <item value="8"/>
+                                <item value="10"/>
+                                <item value="12"/>
+                                <item value="15"/>
+                                <item value="999"/>
+                              </model>
+                              <preferredSize width="60" height="30"/>
+                            </properties>
+                          </component>
+                        </children>
+                      </grid>
+                    </children>
+                  </grid>
+                </children>
+              </grid>
+            </children>
+          </grid>
+          <component id="3c722" class="javax.swing.JButton" binding="okButton">
+            <constraints>
+              <grid row="0" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="8" fill="0" indent="0" use-parent-layout="false">
+                <minimum-size width="80" height="-1"/>
+              </grid>
+            </constraints>
+            <properties>
+              <text value="完成"/>
+            </properties>
+          </component>
+        </children>
+      </grid>
+      <grid id="a1795" binding="gradientContainer" layout-manager="GridLayoutManager" row-count="1" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+        <margin top="0" left="5" bottom="0" right="0"/>
+        <constraints>
+          <grid row="1" column="0" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="9" fill="0" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <enabled value="true"/>
+        </properties>
+        <border type="line" title="Gradient">
+          <font/>
+          <title-color color="-4473925"/>
+          <color color="-4473925"/>
+        </border>
+        <children>
+          <grid id="dc1dc" layout-manager="GridLayoutManager" row-count="4" column-count="2" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+            <margin top="0" left="0" bottom="0" right="0"/>
+            <constraints>
+              <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+            </constraints>
+            <properties/>
+            <border type="none"/>
+            <children>
+              <grid id="9d7e7" layout-manager="FlowLayout" hgap="0" vgap="0" flow-align="0">
+                <constraints>
+                  <grid row="1" column="0" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+                </constraints>
+                <properties/>
+                <border type="none"/>
+                <children>
+                  <grid id="af1de" layout-manager="FlowLayout" hgap="0" vgap="0" flow-align="0">
+                    <constraints/>
+                    <properties/>
+                    <border type="none"/>
+                    <children>
+                      <component id="d61c2" class="javax.swing.JLabel">
+                        <constraints/>
+                        <properties>
+                          <text value="centerColor"/>
+                        </properties>
+                      </component>
+                      <component id="71c2c" class="javax.swing.JTextField" binding="gradientCenterColor" custom-create="true">
+                        <constraints/>
+                        <properties>
+                          <preferredSize width="90" height="30"/>
+                        </properties>
+                      </component>
+                    </children>
+                  </grid>
+                </children>
+              </grid>
+              <grid id="5ae48" layout-manager="GridLayoutManager" row-count="1" column-count="2" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+                <margin top="0" left="0" bottom="0" right="0"/>
+                <constraints>
+                  <grid row="2" column="0" row-span="1" col-span="2" vsize-policy="3" hsize-policy="3" anchor="1" fill="1" indent="0" use-parent-layout="false"/>
+                </constraints>
+                <properties/>
+                <border type="none"/>
+                <children>
+                  <grid id="7dbee" layout-manager="GridLayoutManager" row-count="1" column-count="2" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+                    <margin top="0" left="0" bottom="0" right="0"/>
+                    <constraints>
+                      <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+                    </constraints>
+                    <properties/>
+                    <border type="none"/>
+                    <children>
+                      <component id="9bcc4" class="javax.swing.JLabel">
+                        <constraints>
+                          <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+                        </constraints>
+                        <properties>
+                          <text value="centerX  "/>
+                        </properties>
+                      </component>
+                      <component id="68468" class="javax.swing.JComboBox" binding="gradientCenterX" custom-create="true">
+                        <constraints>
+                          <grid row="0" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="2" anchor="8" fill="1" indent="0" use-parent-layout="false"/>
+                        </constraints>
+                        <properties>
+                          <model>
+                            <item value="0.05"/>
+                            <item value="0.1"/>
+                            <item value="0.2"/>
+                            <item value="0.5"/>
+                            <item value="0.75"/>
+                            <item value="1"/>
+                          </model>
+                        </properties>
+                      </component>
+                    </children>
+                  </grid>
+                  <grid id="4c744" layout-manager="FlowLayout" hgap="5" vgap="5" flow-align="1">
+                    <constraints>
+                      <grid row="0" column="1" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+                    </constraints>
+                    <properties/>
+                    <border type="none"/>
+                    <children>
+                      <component id="3da6b" class="javax.swing.JLabel">
+                        <constraints/>
+                        <properties>
+                          <text value="centerY  "/>
+                        </properties>
+                      </component>
+                      <component id="3be35" class="javax.swing.JComboBox" binding="gradientCenterY" custom-create="true">
+                        <constraints/>
+                        <properties>
+                          <model>
+                            <item value="0.05"/>
+                            <item value="0.1"/>
+                            <item value="0.2"/>
+                            <item value="0.5"/>
+                            <item value="0.75"/>
+                            <item value="1"/>
+                          </model>
+                        </properties>
+                      </component>
+                    </children>
+                  </grid>
+                </children>
+              </grid>
+              <grid id="90cb3" layout-manager="GridLayoutManager" row-count="1" column-count="2" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+                <margin top="0" left="0" bottom="0" right="0"/>
+                <constraints>
+                  <grid row="0" column="0" row-span="1" col-span="2" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+                </constraints>
+                <properties/>
+                <border type="none"/>
+                <children>
+                  <grid id="109d3" layout-manager="FlowLayout" hgap="0" vgap="0" flow-align="1">
+                    <constraints>
+                      <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+                    </constraints>
+                    <properties/>
+                    <border type="none"/>
+                    <children>
+                      <component id="7a89a" class="javax.swing.JLabel">
+                        <constraints/>
+                        <properties>
+                          <text value="startColor   "/>
+                        </properties>
+                      </component>
+                      <component id="88dbc" class="javax.swing.JTextField" binding="gradientStartColor" custom-create="true">
+                        <constraints/>
+                        <properties>
+                          <preferredSize width="90" height="30"/>
+                          <text value=""/>
+                        </properties>
+                      </component>
+                    </children>
+                  </grid>
+                  <grid id="e961b" layout-manager="FlowLayout" hgap="0" vgap="0" flow-align="1">
+                    <constraints>
+                      <grid row="0" column="1" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+                    </constraints>
+                    <properties/>
+                    <border type="none"/>
+                    <children>
+                      <component id="2a87e" class="javax.swing.JLabel">
+                        <constraints/>
+                        <properties>
+                          <text value="endColor"/>
+                        </properties>
+                      </component>
+                      <component id="14aa5" class="javax.swing.JTextField" binding="gradientEndColor" custom-create="true">
+                        <constraints/>
+                        <properties>
+                          <preferredSize width="90" height="30"/>
+                        </properties>
+                      </component>
+                    </children>
+                  </grid>
+                </children>
+              </grid>
+              <grid id="4e531" layout-manager="GridLayoutManager" row-count="1" column-count="2" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+                <margin top="0" left="0" bottom="0" right="0"/>
+                <constraints>
+                  <grid row="3" column="0" row-span="1" col-span="2" vsize-policy="3" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+                </constraints>
+                <properties/>
+                <border type="none"/>
+                <children>
+                  <grid id="42b2" layout-manager="FlowLayout" hgap="0" vgap="0" flow-align="1">
+                    <constraints>
+                      <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+                    </constraints>
+                    <properties/>
+                    <border type="none"/>
+                    <children>
+                      <component id="a2503" class="javax.swing.JLabel">
+                        <constraints/>
+                        <properties>
+                          <text value="type"/>
+                        </properties>
+                      </component>
+                      <component id="65169" class="javax.swing.JComboBox" binding="gradientType" custom-create="true">
+                        <constraints/>
+                        <properties>
+                          <model>
+                            <item value="linear"/>
+                            <item value="radial"/>
+                            <item value="sweep"/>
+                          </model>
+                        </properties>
+                      </component>
+                    </children>
+                  </grid>
+                  <grid id="b09dc" layout-manager="FlowLayout" hgap="0" vgap="0" flow-align="1">
+                    <constraints>
+                      <grid row="0" column="1" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+                    </constraints>
+                    <properties/>
+                    <border type="none"/>
+                    <children>
+                      <component id="5c922" class="javax.swing.JLabel">
+                        <constraints/>
+                        <properties>
+                          <text value="gradientRadius"/>
+                        </properties>
+                      </component>
+                      <component id="6c667" class="javax.swing.JComboBox" binding="gradientRadius" custom-create="true">
+                        <constraints/>
+                        <properties>
+                          <model>
+                            <item value="0"/>
+                            <item value="0.5"/>
+                            <item value="1"/>
+                            <item value="1.5"/>
+                            <item value="2"/>
+                            <item value="2.5"/>
+                            <item value="3"/>
+                            <item value="4"/>
+                            <item value="6"/>
+                            <item value="8"/>
+                            <item value="10"/>
+                            <item value="12"/>
+                            <item value="15"/>
+                            <item value="999"/>
+                          </model>
+                        </properties>
+                      </component>
+                    </children>
+                  </grid>
+                </children>
+              </grid>
+              <grid id="68dd" layout-manager="FlowLayout" hgap="0" vgap="0" flow-align="1">
+                <constraints>
+                  <grid row="1" column="1" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+                </constraints>
+                <properties/>
+                <border type="none"/>
+                <children>
+                  <component id="83c1c" class="javax.swing.JLabel">
+                    <constraints/>
+                    <properties>
+                      <text value="    angle     "/>
+                    </properties>
+                  </component>
+                  <component id="b5851" class="javax.swing.JComboBox" binding="gradientAngle" custom-create="true">
+                    <constraints/>
+                    <properties>
+                      <model>
+                        <item value="0"/>
+                        <item value="45"/>
+                        <item value="90"/>
+                        <item value="135"/>
+                        <item value="180"/>
+                        <item value="270"/>
+                      </model>
+                    </properties>
+                  </component>
+                </children>
+              </grid>
+            </children>
+          </grid>
+        </children>
+      </grid>
+    </children>
+  </grid>
+</form>
