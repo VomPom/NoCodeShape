@@ -1,2 +1,3 @@
 # NoCodeShape
-Android Studio shape.xml 生成插件
+
+A plugin for android developer, with the plugin you can generate "shape.xml" code quickly.
