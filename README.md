@@ -22,6 +22,9 @@ V1.0 功能
 
 4、交互体验优化
 
+# Demo
+ ![image]( https://github.com/VomPom/NoCodeShape/blob/master/demo.gif)
+
 
 # MIT License
 
