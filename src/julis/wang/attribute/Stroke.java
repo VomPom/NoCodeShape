@@ -42,7 +42,7 @@ public class Stroke extends BaseXml {
 
     @Override
     public String getStartTag() {
-        return "<stroke ";
+        return "\n\t<stroke ";
     }
 
     public Builder getBuilder() {
@@ -74,7 +74,7 @@ public class Stroke extends BaseXml {
 
         @Override
         public String getBuilderString() {
-            return StringUtils.getString(color, width, dashWidth, dashGap);
+            return StringUtils.getString(width, color, dashWidth, dashGap);
         }
 
         @Override

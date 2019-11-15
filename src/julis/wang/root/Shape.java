@@ -33,7 +33,7 @@ public class Shape extends BaseXml {
     public String generateXmlString() {
         StringBuilder shapeBuilder = new StringBuilder(SHAPE_DEFAULT);
         shapeBuilder.append(getLineFeedString());
-        if(!TextUtils.isEmpty(getBuilder().getBuilderString())) {
+        if (!TextUtils.isEmpty(getBuilder().getBuilderString())) {
             shapeBuilder.append(getBuilder().getBuilderString());
         }
         shapeBuilder.append(getCloser());
@@ -46,7 +46,7 @@ public class Shape extends BaseXml {
 
     @Override
     public String getCloser() {
-        return " >";
+        return ">";
     }
 
     public String getTagCloser() {
@@ -54,10 +54,11 @@ public class Shape extends BaseXml {
     }
 
     public static class Builder extends BaseBuilder {
-        String shape = "android:shape=\"" + shapes[0] + "\" ";;
+        private static final String DEFAULT = "\tandroid:shape=\"" + shapes[0] + "\"";
+        String shape = DEFAULT;
 
         public void setShape(int type) {
-            this.shape = "android:shape=\"" + shapes[type] + "\" ";
+            this.shape = "\tandroid:shape=\"" + shapes[type] + "\"";
         }
 
         @Override
@@ -67,7 +68,7 @@ public class Shape extends BaseXml {
 
         @Override
         public void clearData() {
-            shape = "android:shape=\"" + shapes[0] + "\" ";
+            shape = DEFAULT;
         }
     }
 

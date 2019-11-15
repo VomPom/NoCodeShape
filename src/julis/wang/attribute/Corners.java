@@ -51,7 +51,7 @@ public class Corners extends BaseXml {
 
     @Override
     public String getStartTag() {
-        return "<corners ";
+        return "\n\t<corners ";
     }
 
     public Builder getBuilder() {
@@ -82,16 +82,16 @@ public class Corners extends BaseXml {
         }
 
         public Builder setBottomRightRadius(String bottomRightRadius) {
-            this.bottomRightRadius = "android:bottomRightRadius=\"" + bottomRightRadius + DefaultData.UNIT +"\"";
+            this.bottomRightRadius = "android:bottomRightRadius=\"" + bottomRightRadius + DefaultData.UNIT + "\"";
             return this;
         }
 
         @Override
         public String getBuilderString() {
             if (Corners.getInstance().isCornersDetailIsChecked()) {
-                return StringUtils.getString(topLeftRadius, topRightRadius, bottomLeftRadius, bottomRightRadius);
+                return StringUtils.getString(bottomLeftRadius, bottomRightRadius, topLeftRadius, topRightRadius);
             }
-            if(TextUtils.isEmpty(radius)) {
+            if (TextUtils.isEmpty(radius)) {
                 return "";
             }
             return StringUtils.getString(radius);

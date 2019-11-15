@@ -3,11 +3,17 @@
     <name>NoCodeShape</name>
     <version>0.1</version>
 
-    <vendor email="julis.wang@beibei.com.com" url="http://www.julis.wang">VomPom</vendor>
+    <vendor email="julis617669559@gmail.com" url="https://julis.wang">VomPom</vendor>
 
     <description>A plugin to simplify shape com,just to save you time</description>
 
-    <change-notes>A plugin to simplify shape com,just to save you time
+    <change-notes>
+        V.10
+        1、界面操作生成shape代码，现在支持 Solid、Corners、Stroke、Gradient
+
+        2、对于Color属性支持颜色选择器
+
+        3、对于数量单位支持下拉选择
     </change-notes>
 
     <depends>com.intellij.modules.lang</depends>
@@ -20,7 +26,7 @@
     <actions>
         <action id="NoCodeShapeAction" class="julis.wang.NoCodeShapeAction" text="NoCodeShape" description="NoCodeShape">
             <add-to-group group-id="XmlGenerateToolsGroup" anchor="before" relative-to-action="GenerateDTD"/>
-            <keyboard-shortcut keymap="$default" first-keystroke="ctrl q"/>
+            <keyboard-shortcut keymap="$default" first-keystroke="ctrl u"/>
 
         </action>
     </actions>

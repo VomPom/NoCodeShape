@@ -48,7 +48,7 @@ public class Solid extends BaseXml {
         String color;
 
         public void setColor(String color) {
-            this.color = "<solid android:color=\"" + color + "\" />";
+            this.color = "\n\t<solid android:color=\"" + color + "\" />";
         }
 
         @Override

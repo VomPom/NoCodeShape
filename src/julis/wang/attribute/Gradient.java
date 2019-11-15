@@ -42,7 +42,7 @@ public class Gradient extends BaseXml {
 
     @Override
     public String getStartTag() {
-        return "<gradient ";
+        return "\n\t<gradient ";
     }
 
     public Builder getBuilder() {
@@ -104,8 +104,8 @@ public class Gradient extends BaseXml {
 
         @Override
         public String getBuilderString() {
-            return StringUtils.getString(angle, centerX, centerY, centerColor,
-                    endColor, startColor, type, gradientRadius, useLevel);
+            return StringUtils.getString(angle, centerColor,centerX, centerY,
+                    endColor, gradientRadius, startColor, type, useLevel);
         }
 
         @Override

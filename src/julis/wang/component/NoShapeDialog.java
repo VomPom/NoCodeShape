@@ -71,6 +71,7 @@ public class NoShapeDialog extends JDialog {
         });
     }
 
+
     public void setOnClickListener(OnClickListener onClickListener) {
         this.onClickListener = onClickListener;
     }

@@ -67,7 +67,7 @@ public class NoCodeShapeAction extends AnAction {
             @Override
             protected void run() {
                 document.setText(XMLString.getInstance().generateXmlString());
-                formatCode();
+                //formatCode();
             }
         }.execute();
     }

@@ -28,6 +28,7 @@ public class StringUtils {
         for (int i = 0; i < strLength; i++) {
             String string = strings[i];
             if (!TextUtils.isEmpty(string)) {
+                builder.append("\t\t\t");
                 builder.append(string);
                 builder.append("\n");
             } else {
@@ -37,12 +38,19 @@ public class StringUtils {
         if (emptyCount == strLength) {
             return "";
         }
-        return builder.toString();
+        return replaceLast(builder.toString());
     }
 
+    /**
+     *  替换字符串里最后出现的元素
+     */
+    private static String replaceLast(String text) {
+        return text.replaceFirst("(?s)" + "\n" + "(?!.*?" + "\n" + ")", "");
+    }
 
     /**
      * 对所有属性进行清空处理
+     *
      * @param object
      */
     public static void clearObjectData(Object object) {
