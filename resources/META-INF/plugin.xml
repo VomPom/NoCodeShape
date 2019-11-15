@@ -1,7 +1,7 @@
 <idea-plugin>
     <id>julis.wang.nocodeshape</id>
-    <name>NewNoCodeShape</name>
-    <version>0.1</version>
+    <name>NoCodeShape</name>
+    <version>1111.1</version>
 
     <vendor email="julis.wang@beibei.com.com" url="http://www.julis.wang">VomPom</vendor>
 
@@ -18,9 +18,9 @@
     </extensions>
 
     <actions>
-        <action id="NoCodeShapeAction" class="julis.wang.NoCodeShapeAction" text="NewNoCodeShape" description="NoCodeShapeAction">
+        <action id="NoCodeShapeAction" class="julis.wang.NoCodeShapeAction" text="NoCodeShape" description="NoCodeShape">
             <add-to-group group-id="XmlGenerateToolsGroup" anchor="before" relative-to-action="GenerateDTD"/>
-            <keyboard-shortcut keymap="$default" first-keystroke="ctrl Y"/>
+            <keyboard-shortcut keymap="$default" first-keystroke="ctrl q"/>
 
         </action>
     </actions>

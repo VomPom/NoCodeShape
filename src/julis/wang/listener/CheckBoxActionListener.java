@@ -1,7 +1,7 @@
-package julis.wang.attribute.listener;
+package julis.wang.listener;
 
 
-import julis.wang.NoShapeDialog;
+import julis.wang.component.NoShapeDialog;
 import julis.wang.attribute.Corners;
 import julis.wang.attribute.Stroke;
 
@@ -12,7 +12,7 @@ import java.awt.event.ActionListener;
  *
  * Created by https://julis.wang on 2019/11/10 17:01
  *
- * Description :
+ * Description : CheckBox选中相关
  * History   :
  *
  *******************************************************/
@@ -42,5 +42,6 @@ public class CheckBoxActionListener extends CommonAction implements ActionListen
             boolean flag = noShapeDialog.cornerDetailCheckBox.isSelected();
             Corners.getInstance().setCornersDetailIsChecked(flag);
         }
+        super.refreshAndWriteData();
     }
 }

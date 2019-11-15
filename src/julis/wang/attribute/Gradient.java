@@ -2,10 +2,10 @@ package julis.wang.attribute;
 
 
 import org.apache.http.util.TextUtils;
-import julis.wang.attribute.root.BaseBuilder;
-import julis.wang.attribute.root.BaseXml;
-import julis.wang.attribute.utils.DefaultData;
-import julis.wang.attribute.utils.StringUtils;
+import julis.wang.root.BaseBuilder;
+import julis.wang.root.BaseXml;
+import julis.wang.utils.DefaultData;
+import julis.wang.utils.StringUtils;
 
 /*******************************************************
  *
@@ -109,10 +109,10 @@ public class Gradient extends BaseXml {
         }
 
         @Override
-        public BaseBuilder clearData() {
+        public void clearData() {
+
             StringUtils.clearData(angle, centerX, centerY, centerColor,
                     endColor, startColor, type, gradientRadius, useLevel);
-            return this;
         }
     }
 }

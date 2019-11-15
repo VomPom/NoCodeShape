@@ -1,4 +1,4 @@
-package julis.wang.attribute.root;
+package julis.wang.root;
 
 import org.apache.http.util.TextUtils;
 
@@ -53,15 +53,21 @@ public class Shape extends BaseXml {
         return "</shape>";
     }
 
-    public static class Builder {
+    public static class Builder extends BaseBuilder {
         String shape = "android:shape=\"" + shapes[0] + "\" ";;
 
         public void setShape(int type) {
             this.shape = "android:shape=\"" + shapes[type] + "\" ";
         }
 
-        String getBuilderString() {
+        @Override
+        public String getBuilderString() {
             return shape;
+        }
+
+        @Override
+        public void clearData() {
+            shape = "android:shape=\"" + shapes[0] + "\" ";
         }
     }
 

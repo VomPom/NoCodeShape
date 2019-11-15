@@ -1,8 +1,8 @@
-package julis.wang.attribute.listener;
+package julis.wang.listener;
 
 
 import julis.wang.NoCodeShapeAction;
-import julis.wang.NoShapeDialog;
+import julis.wang.component.NoShapeDialog;
 
 import javax.swing.*;
 

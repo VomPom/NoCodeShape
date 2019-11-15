@@ -1,16 +1,14 @@
-package julis.wang;
+package julis.wang.component;
 
 
+import julis.wang.NoCodeShapeAction;
+import julis.wang.attribute.Corners;
 import julis.wang.attribute.Gradient;
 import julis.wang.attribute.Solid;
 import julis.wang.attribute.Stroke;
-import julis.wang.attribute.listener.ComboBoxValueSelectedListener;
-import julis.wang.attribute.listener.ShapeCheckListener;
-import julis.wang.attribute.Corners;
-import julis.wang.attribute.listener.CheckBoxActionListener;
-import julis.wang.attribute.utils.DefaultData;
-import julis.wang.attribute.view.ColorChoiceComponent;
-import julis.wang.attribute.view.ComboBoxChoiceComponent;
+import julis.wang.listener.CheckBoxActionListener;
+import julis.wang.listener.ShapeCheckListener;
+import julis.wang.utils.DefaultData;
 
 import javax.swing.*;
 import java.awt.*;
@@ -21,29 +19,29 @@ import java.awt.event.ActionListener;
  *
  * Created by https://julis.wang on 2019/10/31 15:23
  *
- * Description :
+ * Description : 主界面Dialog
  * History   :
  *
  *******************************************************/
 
 public class NoShapeDialog extends JDialog {
     private OnClickListener onClickListener;
+    private JRadioButton rectangle, line, oval, ring;
     private JButton okButton;
     private JPanel contentPane;
-    private JComboBox functionComboBox;
-    private JRadioButton rectangle, line, oval, ring;
-    private JCheckBox sizeCheckBox;
-    private JCheckBox paddingCheckBox;
+
     public JPanel gradientContainer, strokeContainer, cornersDetailContainer, cornersContainer, solidContainer;
+
+    private JComboBox functionComboBox;
     public JComboBox cornersRadius, cornersTopLeft, cornersTopRight, cornersBottomLeft, cornersBottomRight;
-    public JCheckBox strokeCheckBox, cornersCheckBox, cornerDetailCheckBox;
+    public JCheckBox strokeCheckBox, cornersCheckBox, cornerDetailCheckBox, sizeCheckBox, paddingCheckBox;
     public JComboBox strokeWidth, strokeDashGap, strokeDashWidth;
     public JComboBox gradientRadius, gradientAngle;
+    public JComboBox gradientCenterX, gradientCenterY, gradientType;
 
-    //颜色控件
     public JTextField strokeColor, solidColor;
     public JTextField gradientEndColor, gradientCenterColor, gradientStartColor;
-    public JComboBox gradientCenterX, gradientCenterY, gradientType;
+
 
     private ShapeCheckListener shapeCheckListener = new ShapeCheckListener();
     private CheckBoxActionListener checkBoxActionListener = new CheckBoxActionListener(this);
@@ -51,7 +49,6 @@ public class NoShapeDialog extends JDialog {
     public NoShapeDialog() throws HeadlessException {
         initNoShapeDialog();
         initFunctions();
-        initCheckBoxData();
         initAction();
         clearData();
     }
@@ -61,7 +58,6 @@ public class NoShapeDialog extends JDialog {
      * 几个功能的初始化
      */
     private void initAction() {
-
         strokeCheckBox.addActionListener(checkBoxActionListener);
         cornersCheckBox.addActionListener(checkBoxActionListener);
         cornerDetailCheckBox.addActionListener(checkBoxActionListener);
@@ -75,13 +71,12 @@ public class NoShapeDialog extends JDialog {
         });
     }
 
-    void setOnClickListener(OnClickListener onClickListener) {
+    public void setOnClickListener(OnClickListener onClickListener) {
         this.onClickListener = onClickListener;
     }
 
     private void createUIComponents() {
-       solidColor = new ColorChoiceComponent(this);
-
+        solidColor = new ColorChoiceComponent(this);
 
         cornersRadius = new ComboBoxChoiceComponent(this);
         cornersTopLeft = new ComboBoxChoiceComponent(this);
@@ -102,8 +97,6 @@ public class NoShapeDialog extends JDialog {
         gradientEndColor = new ColorChoiceComponent(this);
         gradientStartColor = new ColorChoiceComponent(this);
         gradientCenterColor = new ColorChoiceComponent(this);
-
-
     }
 
 
@@ -175,28 +168,5 @@ public class NoShapeDialog extends JDialog {
 
     }
 
-    /**
-     * 关于radius的数据初始化与绑定
-     */
-    private void initCheckBoxData() {
-        ComboBoxValueSelectedListener listener = new ComboBoxValueSelectedListener(this);
-
-        for (String str : DefaultData.solidAndGradient) {
-            functionComboBox.addItem(str);
-        }
-        for (String str : DefaultData.radius) {
-            cornersRadius.addItem(str);
-            cornersTopRight.addItem(str);
-            cornersTopLeft.addItem(str);
-            cornersBottomLeft.addItem(str);
-            cornersBottomRight.addItem(str);
-        }
-        cornersRadius.addItemListener(listener);
-        cornersTopRight.addItemListener(listener);
-        cornersTopLeft.addItemListener(listener);
-        cornersBottomLeft.addItemListener(listener);
-        cornersBottomRight.addItemListener(listener);
-
-    }
 
 }

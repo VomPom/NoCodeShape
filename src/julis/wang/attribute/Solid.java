@@ -2,9 +2,9 @@ package julis.wang.attribute;
 
 
 import org.apache.http.util.TextUtils;
-import julis.wang.attribute.root.BaseBuilder;
-import julis.wang.attribute.root.BaseXml;
-import julis.wang.attribute.utils.StringUtils;
+import julis.wang.root.BaseBuilder;
+import julis.wang.root.BaseXml;
+import julis.wang.utils.StringUtils;
 
 /*******************************************************
  *
@@ -56,9 +56,8 @@ public class Solid extends BaseXml {
             return StringUtils.getString(color);
         }
         @Override
-        public BaseBuilder clearData() {
+        public void clearData() {
             StringUtils.clearData(color);
-            return this;
         }
     }
 }

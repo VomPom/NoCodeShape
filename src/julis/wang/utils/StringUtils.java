@@ -1,4 +1,4 @@
-package julis.wang.attribute.utils;
+package julis.wang.utils;
 
 import org.apache.http.util.TextUtils;
 

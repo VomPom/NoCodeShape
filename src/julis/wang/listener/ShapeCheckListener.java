@@ -1,7 +1,7 @@
-package julis.wang.attribute.listener;
+package julis.wang.listener;
 
 
-import julis.wang.attribute.root.Shape;
+import julis.wang.root.Shape;
 
 import javax.swing.*;
 import java.awt.event.ItemEvent;
@@ -11,7 +11,7 @@ import java.awt.event.ItemListener;
  *
  * Created by https://julis.wang on 2019/11/06 16:55
  *
- * Description :
+ * Description : Shape 的几种情况进行监听
  * History   :
  *
  *******************************************************/

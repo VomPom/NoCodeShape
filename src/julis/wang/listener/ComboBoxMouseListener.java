@@ -1,11 +1,11 @@
-package julis.wang.attribute.listener;
+package julis.wang.listener;
 
 
-import julis.wang.NoShapeDialog;
+import julis.wang.component.NoShapeDialog;
 import julis.wang.attribute.Corners;
 import julis.wang.attribute.Gradient;
 import julis.wang.attribute.Stroke;
-import julis.wang.attribute.view.ComboBoxChoiceComponent;
+import julis.wang.component.ComboBoxChoiceComponent;
 
 import java.awt.event.ItemEvent;
 import java.awt.event.ItemListener;
@@ -14,7 +14,7 @@ import java.awt.event.ItemListener;
  *
  * Created by https://julis.wang on 2019/11/13 19:49
  *
- * Description :
+ * Description : 对于下拉选择数据值控件
  * History   :
  *
  *******************************************************/

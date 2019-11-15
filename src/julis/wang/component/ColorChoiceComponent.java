@@ -1,8 +1,7 @@
-package julis.wang.attribute.view;
+package julis.wang.component;
 
 
-import julis.wang.NoShapeDialog;
-import julis.wang.attribute.listener.ColorFieldMouseListener;
+import julis.wang.listener.ColorFieldMouseListener;
 
 import javax.swing.*;
 

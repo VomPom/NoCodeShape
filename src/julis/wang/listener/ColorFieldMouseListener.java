@@ -1,13 +1,13 @@
-package julis.wang.attribute.listener;
+package julis.wang.listener;
 
 import com.intellij.ui.ColorChooser;
-import julis.wang.NoShapeDialog;
+import julis.wang.component.NoShapeDialog;
 import julis.wang.attribute.Gradient;
 import julis.wang.attribute.Solid;
 import julis.wang.attribute.Stroke;
-import julis.wang.attribute.view.ColorChoiceComponent;
+import julis.wang.component.ColorChoiceComponent;
 import org.apache.http.util.TextUtils;
-import julis.wang.attribute.utils.ColorUtils;
+import julis.wang.utils.ColorUtils;
 
 import javax.swing.*;
 import java.awt.*;
@@ -18,7 +18,7 @@ import java.awt.event.MouseListener;
  *
  * Created by https://julis.wang on 2019/11/13 15:10
  *
- * Description :
+ * Description : 对颜色控件的处理
  * History   :
  *
  *******************************************************/

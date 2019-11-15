@@ -9,6 +9,8 @@ import com.intellij.openapi.editor.Document;
 import com.intellij.openapi.fileEditor.FileDocumentManager;
 import com.intellij.openapi.project.Project;
 import com.intellij.openapi.vfs.VirtualFile;
+import julis.wang.attribute.XMLString;
+import julis.wang.component.NoShapeDialog;
 
 /*******************************************************
  *

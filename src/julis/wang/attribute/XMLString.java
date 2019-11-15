@@ -1,12 +1,8 @@
-package julis.wang;
+package julis.wang.attribute;
 
 
-import julis.wang.attribute.Corners;
-import julis.wang.attribute.Gradient;
-import julis.wang.attribute.Solid;
-import julis.wang.attribute.Stroke;
-import julis.wang.attribute.root.BaseXml;
-import julis.wang.attribute.root.Shape;
+import julis.wang.root.BaseXml;
+import julis.wang.root.Shape;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -26,7 +22,7 @@ public class XMLString extends BaseXml {
     private static final String XML_HEADER = "<?xml version=\"1.0\" encoding=\"utf-8\"?>";
 
 
-    protected static XMLString getInstance() {
+    public static XMLString getInstance() {
         if (instance == null) {
             xmlList.add(Shape.getInstance());
             xmlList.add(Solid.getInstance());

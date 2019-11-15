@@ -1,4 +1,4 @@
-package julis.wang.attribute.root;
+package julis.wang.root;
 
 /*******************************************************
  *
@@ -11,5 +11,5 @@ package julis.wang.attribute.root;
 
 public abstract class BaseBuilder {
     public abstract String getBuilderString();
-    public abstract BaseBuilder clearData();
+    public abstract void clearData();
 }

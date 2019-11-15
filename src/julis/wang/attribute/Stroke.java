@@ -1,11 +1,11 @@
 package julis.wang.attribute;
 
 
-import julis.wang.attribute.root.BaseXml;
+import julis.wang.root.BaseXml;
 import org.apache.http.util.TextUtils;
-import julis.wang.attribute.root.BaseBuilder;
-import julis.wang.attribute.utils.DefaultData;
-import julis.wang.attribute.utils.StringUtils;
+import julis.wang.root.BaseBuilder;
+import julis.wang.utils.DefaultData;
+import julis.wang.utils.StringUtils;
 
 /*******************************************************
  *
@@ -53,7 +53,7 @@ public class Stroke extends BaseXml {
         String color, dashWidth, dashGap, width;
 
         public Builder setWidth(String width) {
-            this.width = "android:width=\"" + width + "\"";
+            this.width = "android:width=\"" + width + DefaultData.UNIT + "\"";
             return this;
         }
 
@@ -78,9 +78,8 @@ public class Stroke extends BaseXml {
         }
 
         @Override
-        public BaseBuilder clearData() {
+        public void clearData() {
             StringUtils.clearData(color, width, dashWidth, dashGap);
-            return this;
         }
     }
 }

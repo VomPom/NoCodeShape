@@ -1,8 +1,7 @@
-package julis.wang.attribute.view;
+package julis.wang.component;
 
 
-import julis.wang.NoShapeDialog;
-import julis.wang.attribute.listener.ComboBoxMouseListener;
+import julis.wang.listener.ComboBoxMouseListener;
 
 import javax.swing.*;
 
