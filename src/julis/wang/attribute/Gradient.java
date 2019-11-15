@@ -111,8 +111,7 @@ public class Gradient extends BaseXml {
         @Override
         public void clearData() {
 
-            StringUtils.clearData(angle, centerX, centerY, centerColor,
-                    endColor, startColor, type, gradientRadius, useLevel);
+            StringUtils.clearObjectData(this);
         }
     }
 }

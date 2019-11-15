@@ -79,7 +79,8 @@ public class Stroke extends BaseXml {
 
         @Override
         public void clearData() {
-            StringUtils.clearData(color, width, dashWidth, dashGap);
+            StringUtils.clearObjectData(this);
+
         }
     }
 }

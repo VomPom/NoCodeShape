@@ -50,7 +50,7 @@ public class Shape extends BaseXml {
     }
 
     public String getTagCloser() {
-        return "</shape>";
+        return "\n</shape>";
     }
 
     public static class Builder extends BaseBuilder {

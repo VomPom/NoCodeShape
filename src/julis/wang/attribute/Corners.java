@@ -99,7 +99,7 @@ public class Corners extends BaseXml {
 
         @Override
         public void clearData() {
-            StringUtils.clearData(radius);
+            StringUtils.clearObjectData(this);
         }
     }
 }
