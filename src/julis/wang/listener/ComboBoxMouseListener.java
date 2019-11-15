@@ -1,11 +1,11 @@
 package julis.wang.listener;
 
 
-import julis.wang.component.NoShapeDialog;
 import julis.wang.attribute.Corners;
 import julis.wang.attribute.Gradient;
 import julis.wang.attribute.Stroke;
 import julis.wang.component.ComboBoxChoiceComponent;
+import julis.wang.component.NoShapeDialog;
 
 import java.awt.event.ItemEvent;
 import java.awt.event.ItemListener;

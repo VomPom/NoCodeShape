@@ -702,6 +702,7 @@
                         </constraints>
                         <properties>
                           <model>
+                            <item value="0"/>
                             <item value="0.05"/>
                             <item value="0.1"/>
                             <item value="0.2"/>
@@ -730,6 +731,7 @@
                         <constraints/>
                         <properties>
                           <model>
+                            <item value="0"/>
                             <item value="0.05"/>
                             <item value="0.1"/>
                             <item value="0.2"/>
@@ -821,6 +823,7 @@
                         <constraints/>
                         <properties>
                           <model>
+                            <item value=""/>
                             <item value="linear"/>
                             <item value="radial"/>
                             <item value="sweep"/>
