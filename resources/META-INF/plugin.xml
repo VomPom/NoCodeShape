@@ -1,7 +1,7 @@
 <idea-plugin>
     <id>julis.wang.nocodeshape</id>
     <name>NoCodeShape</name>
-    <version>1111.1</version>
+    <version>0.1</version>
 
     <vendor email="julis.wang@beibei.com.com" url="http://www.julis.wang">VomPom</vendor>
 
