@@ -11,6 +11,11 @@ import com.intellij.openapi.project.Project;
 import com.intellij.openapi.vfs.VirtualFile;
 import julis.wang.attribute.XMLString;
 import julis.wang.component.NoShapeDialog;
+import julis.wang.findattribute.ShapeSaxHandler;
+import org.xml.sax.SAXException;
+
+import javax.xml.parsers.ParserConfigurationException;
+import java.io.IOException;
 
 /*******************************************************
  *
@@ -31,6 +36,7 @@ public class NoCodeShapeAction extends AnAction {
         NoCodeShapeAction.event = event;
         project = getEventProject(event);
         file = event.getData(LangDataKeys.VIRTUAL_FILE);
+        initSax();
         NoShapeDialog noShapeDialog = new NoShapeDialog();
         noShapeDialog.setOnClickListener(() -> {
             noShapeDialog.dispose();
@@ -74,6 +80,20 @@ public class NoCodeShapeAction extends AnAction {
 
     public static void callWriteData() {
         writeData();
+    }
+
+    private void initSax() {
+        String text = FileDocumentManager.getInstance().getDocument(file).getText();
+        ShapeSaxHandler handler = new ShapeSaxHandler();
+        try {
+            handler.createViewList(text);
+        } catch (ParserConfigurationException e) {
+            e.printStackTrace();
+        } catch (SAXException e) {
+            e.printStackTrace();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 
 }

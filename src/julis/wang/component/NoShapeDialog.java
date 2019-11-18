@@ -50,7 +50,9 @@ public class NoShapeDialog extends JDialog {
         initNoShapeDialog();
         initFunctions();
         initAction();
-        clearData();
+
+//        clearData();
+        initData();
     }
 
 
@@ -168,6 +170,12 @@ public class NoShapeDialog extends JDialog {
         });
 
     }
-
+    /**
+     * 对dialog初始化的数据进行展示Ω
+     */
+    public void initData() {
+       ComponentValueHelper helper = new ComponentValueHelper(this);
+       helper.doCornersValue();
+    }
 
 }

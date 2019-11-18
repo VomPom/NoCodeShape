@@ -1,11 +1,11 @@
 package julis.wang.attribute;
 
 
-import org.apache.http.util.TextUtils;
 import julis.wang.root.BaseBuilder;
 import julis.wang.root.BaseXml;
-import julis.wang.utils.DefaultData;
 import julis.wang.utils.StringUtils;
+import org.apache.http.util.TextUtils;
+import org.xml.sax.Attributes;
 
 /*******************************************************
  *
@@ -60,30 +60,50 @@ public class Corners extends BaseXml {
 
     public static class Builder extends BaseBuilder {
         String radius, topLeftRadius, topRightRadius, bottomLeftRadius, bottomRightRadius;
-
-        public Builder setRadius(String radius) {
-            this.radius = "android:radius=\"" + radius + DefaultData.UNIT + "\"";
-            return this;
+        String radiusValue, topLeftRadiusValue, topRightRadiusValue, bottomLeftRadiusValue, bottomRightRadiusValue;
+        public void setRadius(String radius) {
+            this.radiusValue = radius;
+            this.radius = getAttrWithUnitStr("radius", radius);
         }
 
-        public Builder setTopLeftRadius(String topLeftRadius) {
-            this.topLeftRadius = "android:topLeftRadius=\"" + topLeftRadius + DefaultData.UNIT + "\"";
-            return this;
+        public void setTopLeftRadius(String topLeftRadius) {
+            this.topLeftRadiusValue = topLeftRadius;
+            this.topLeftRadius = getAttrWithUnitStr("topLeftRadius", topLeftRadius);
         }
 
-        public Builder setTopRightRadius(String topRightRadius) {
-            this.topRightRadius = "android:topRightRadius=\"" + topRightRadius + DefaultData.UNIT + "\"";
-            return this;
+        public void setTopRightRadius(String topRightRadius) {
+            this.topRightRadiusValue = topRightRadius;
+            this.topRightRadius = getAttrWithUnitStr("topRightRadius", topRightRadius);
         }
 
-        public Builder setBottomLeftRadius(String bottomLeftRadius) {
-            this.bottomLeftRadius = "android:bottomLeftRadius=\"" + bottomLeftRadius + DefaultData.UNIT + "\"";
-            return this;
+        public void setBottomLeftRadius(String bottomLeftRadius) {
+            this.bottomLeftRadiusValue = bottomLeftRadius;
+            this.bottomLeftRadius = getAttrWithUnitStr("bottomLeftRadius", bottomLeftRadius);
         }
 
-        public Builder setBottomRightRadius(String bottomRightRadius) {
-            this.bottomRightRadius = "android:bottomRightRadius=\"" + bottomRightRadius + DefaultData.UNIT + "\"";
-            return this;
+        public void setBottomRightRadius(String bottomRightRadius) {
+            this.bottomRightRadiusValue = bottomRightRadius;
+            this.bottomRightRadius = getAttrWithUnitStr("bottomRightRadius", bottomRightRadius);
+        }
+
+        public String getRadiusValue() {
+            return radiusValue;
+        }
+
+        public String getTopLeftRadiusValue() {
+            return topLeftRadiusValue;
+        }
+
+        public String getTopRightRadiusValue() {
+            return topRightRadiusValue;
+        }
+
+        public String getBottomLeftRadiusValue() {
+            return bottomLeftRadiusValue;
+        }
+
+        public String getBottomRightRadiusValue() {
+            return bottomRightRadiusValue;
         }
 
         @Override
@@ -100,6 +120,21 @@ public class Corners extends BaseXml {
         @Override
         public void clearData() {
             StringUtils.clearObjectData(this);
+        }
+
+        @Override
+        public void analysisAttribute(Attributes attributes) {
+            Corners.getInstance().setChecked(true);
+            if (attributes.getLength() >= 2) {
+                Corners.getInstance().setCornersDetailIsChecked(true);
+            } else {
+                Corners.getInstance().setCornersDetailIsChecked(false);
+            }
+            setBottomRightRadius(attributes.getValue("android:bottomRightRadius"));
+            setBottomLeftRadius(attributes.getValue("android:bottomLeftRadius"));
+            setTopRightRadius(attributes.getValue("android:topRightRadius"));
+            setTopLeftRadius(attributes.getValue("android:topLeftRadius"));
+            setRadius(attributes.getValue("android:radius"));
         }
     }
 }

@@ -1,11 +1,11 @@
 package julis.wang.attribute;
 
 
-import julis.wang.root.BaseXml;
-import org.apache.http.util.TextUtils;
 import julis.wang.root.BaseBuilder;
-import julis.wang.utils.DefaultData;
+import julis.wang.root.BaseXml;
 import julis.wang.utils.StringUtils;
+import org.apache.http.util.TextUtils;
+import org.xml.sax.Attributes;
 
 /*******************************************************
  *
@@ -51,25 +51,44 @@ public class Stroke extends BaseXml {
 
     public static class Builder extends BaseBuilder {
         String color, dashWidth, dashGap, width;
+        String colorValue, dashWidthValue, dashGapValue, widthValue;
 
-        public Builder setWidth(String width) {
-            this.width = "android:width=\"" + width + DefaultData.UNIT + "\"";
-            return this;
+        public void setWidth(String width) {
+            this.widthValue = width;
+            this.width = getAttrWithUnitStr("width", width);
         }
 
-        public Builder setColor(String color) {
-            this.color = "android:color=\"" + color + "\"";
-            return this;
+        public void setColor(String color) {
+            this.colorValue = color;
+            this.color = getAttrWithOutUnitStr("color", color);
         }
 
-        public Builder setDashWidth(String dashWidth) {
-            this.dashWidth = "android:dashWidth=\"" + dashWidth + DefaultData.UNIT + "\"";
-            return this;
+        public void setDashWidth(String dashWidth) {
+            this.dashWidthValue = dashWidth;
+            this.dashWidth = getAttrWithUnitStr("dashWidth", dashWidth);
+
         }
 
-        public Builder setDashGap(String dashGap) {
-            this.dashGap = "android:dashGap=\"" + dashGap + DefaultData.UNIT + "\"";
-            return this;
+        public void setDashGap(String dashGap) {
+            this.dashGapValue = dashGap;
+            this.dashGap = getAttrWithUnitStr("dashGap", dashGap);
+        }
+
+
+        public String getColorValue() {
+            return colorValue;
+        }
+
+        public String getDashWidthValue() {
+            return dashWidthValue;
+        }
+
+        public String getDashGapValue() {
+            return dashGapValue;
+        }
+
+        public String getWidthValue() {
+            return widthValue;
         }
 
         @Override
@@ -77,10 +96,21 @@ public class Stroke extends BaseXml {
             return StringUtils.getString(width, color, dashWidth, dashGap);
         }
 
+
         @Override
         public void clearData() {
             StringUtils.clearObjectData(this);
-
         }
+
+        @Override
+        public void analysisAttribute(Attributes attributes) {
+            Stroke.getInstance().setChecked(true);
+            setColor(attributes.getValue("android:color"));
+            setDashGap(attributes.getValue("android:dashGap"));
+            setWidth(attributes.getValue("android:width"));
+            setDashWidth(attributes.getValue("android:dashWidth"));
+        }
+
+
     }
 }

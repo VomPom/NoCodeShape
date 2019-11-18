@@ -1,11 +1,11 @@
 package julis.wang.attribute;
 
 
-import org.apache.http.util.TextUtils;
 import julis.wang.root.BaseBuilder;
 import julis.wang.root.BaseXml;
-import julis.wang.utils.DefaultData;
 import julis.wang.utils.StringUtils;
+import org.apache.http.util.TextUtils;
+import org.xml.sax.Attributes;
 
 /*******************************************************
  *
@@ -51,60 +51,93 @@ public class Gradient extends BaseXml {
 
     public static class Builder extends BaseBuilder {
         String angle, centerX, centerY, centerColor, endColor, startColor, type, gradientRadius, useLevel;
+        String angleValue, centerXValue, centerYValue, centerColorValue,
+                endColorValue, startColorValue, typeValue, gradientRadiusValue, useLevelValue;
 
-        public Builder setAngle(String angle) {
-            this.angle = "android:angle=\"" + angle + "\"";
-            return this;
+        public void setAngle(String angle) {
+            this.angleValue = angle;
+            this.angle = getAttrWithOutUnitStr("angle", angle);
         }
 
-        public Builder setCenterX(String centerX) {
-            this.centerX = "android:centerX=\"" + centerX + "\"";
-            return this;
+        public void setCenterX(String centerX) {
+            this.centerXValue = centerX;
+            this.centerX = getAttrWithOutUnitStr("centerX", centerX);
         }
 
-        public Builder setCenterY(String centerY) {
-            this.centerY = "android:centerY=\"" + centerY + "\"";
-            return this;
+        public void setCenterY(String centerY) {
+            this.centerYValue = centerY;
+            this.centerY = getAttrWithOutUnitStr("centerY", centerY);
         }
 
-        public Builder setCenterColor(String centerColor) {
-            this.centerColor = "android:centerColor=\"" + centerColor + "\"";
-
-            return this;
+        public void setCenterColor(String centerColor) {
+            this.centerColorValue = centerColor;
+            this.centerColor = getAttrWithOutUnitStr("centerColor", centerColor);
         }
 
-        public Builder setEndColor(String endColor) {
-            this.endColor = "android:endColor=\"" + endColor + "\"";
-            return this;
+        public void setEndColor(String endColor) {
+            this.endColorValue = endColor;
+            this.endColor = getAttrWithOutUnitStr("endColor", endColor);
         }
 
-        public Builder setStartColor(String startColor) {
-            this.startColor = "android:startColor=\"" + startColor + "\"";
-
-            return this;
+        public void setStartColor(String startColor) {
+            this.startColorValue = startColor;
+            this.startColor = getAttrWithOutUnitStr("startColor", startColor);
         }
 
-        public Builder setType(String type) {
-            this.type = "android:type=\"" + type + "\"";
-
-            return this;
+        public void setType(String type) {
+            this.typeValue = type;
+            this.type = getAttrWithOutUnitStr("type", type);
         }
 
-        public Builder setGradientRadius(String gradientRadius) {
-            this.gradientRadius = "android:gradientRadius=\"" + gradientRadius + DefaultData.UNIT + "\"";
-
-            return this;
+        public void setGradientRadius(String gradientRadius) {
+            this.gradientRadiusValue = gradientRadius;
+            this.gradientRadius = getAttrWithUnitStr("gradientRadius", gradientRadius);
         }
 
-        public Builder setUseLevel(String useLevel) {
-            this.useLevel = "android:useLevel=\"" + useLevel + "\"";
+        public void setUseLevel(String useLevel) {
+            this.useLevelValue = useLevel;
+            this.useLevel = getAttrWithOutUnitStr("useLevel", useLevel);
+        }
 
-            return this;
+        public String getAngleValue() {
+            return angleValue;
+        }
+
+        public String getCenterXValue() {
+            return centerXValue;
+        }
+
+        public String getCenterYValue() {
+            return centerYValue;
+        }
+
+        public String getCenterColorValue() {
+            return centerColorValue;
+        }
+
+        public String getEndColorValue() {
+            return endColorValue;
+        }
+
+        public String getStartColorValue() {
+            return startColorValue;
+        }
+
+        public String getTypeValue() {
+            return typeValue;
+        }
+
+        public String getGradientRadiusValue() {
+            return gradientRadiusValue;
+        }
+
+        public String getUseLevelValue() {
+            return useLevelValue;
         }
 
         @Override
         public String getBuilderString() {
-            return StringUtils.getString(angle, centerColor,centerX, centerY,
+            return StringUtils.getString(angle, centerColor, centerX, centerY,
                     endColor, gradientRadius, startColor, type, useLevel);
         }
 
@@ -112,6 +145,20 @@ public class Gradient extends BaseXml {
         public void clearData() {
 
             StringUtils.clearObjectData(this);
+        }
+
+        @Override
+        public void analysisAttribute(Attributes attributes) {
+            Gradient.getInstance().setChecked(true);
+            setAngle(attributes.getValue("android:angle"));
+            setType(attributes.getValue("android:type"));
+            setCenterY(attributes.getValue("android:centerY"));
+            setCenterX(attributes.getValue("android:centerX"));
+            setCenterColor(attributes.getValue("android:centerColor"));
+            setStartColor(attributes.getValue("android:startColor"));
+            setEndColor(attributes.getValue("android:endColor"));
+            setUseLevel(attributes.getValue("android:useLevel"));
+            setGradientRadius(attributes.getValue("android:gradientRadius"));
         }
     }
 }

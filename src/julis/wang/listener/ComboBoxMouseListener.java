@@ -20,6 +20,7 @@ import java.awt.event.ItemListener;
  *******************************************************/
 
 public class ComboBoxMouseListener extends CommonAction implements ItemListener {
+
     public ComboBoxMouseListener(NoShapeDialog noShapeDialog, ComboBoxChoiceComponent component) {
         super.component = component;
         this.noShapeDialog = noShapeDialog;

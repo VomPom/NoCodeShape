@@ -1,6 +1,7 @@
 package julis.wang.root;
 
 import org.apache.http.util.TextUtils;
+import org.xml.sax.Attributes;
 
 /*******************************************************
  *
@@ -53,12 +54,24 @@ public class Shape extends BaseXml {
         return "\n</shape>";
     }
 
+    @Override
+    public boolean isChecked() {
+        return true;
+    }
+
     public static class Builder extends BaseBuilder {
         private static final String DEFAULT = "\tandroid:shape=\"" + shapes[0] + "\"";
         String shape = DEFAULT;
 
         public void setShape(int type) {
             this.shape = "\tandroid:shape=\"" + shapes[type] + "\"";
+        }
+
+        public void setShape(String type) {
+            if (TextUtils.isEmpty(type)) {
+                return;
+            }
+            this.shape = "\tandroid:shape=\"" + type + "\"";
         }
 
         @Override
@@ -69,6 +82,12 @@ public class Shape extends BaseXml {
         @Override
         public void clearData() {
             shape = DEFAULT;
+        }
+
+        @Override
+        public void analysisAttribute(Attributes attributes) {
+            String id = attributes.getValue("android:shape");
+            Shape.getInstance().getBuilder().setShape(id);
         }
     }
 

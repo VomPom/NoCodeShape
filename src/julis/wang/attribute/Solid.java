@@ -5,6 +5,7 @@ import julis.wang.root.BaseBuilder;
 import julis.wang.root.BaseXml;
 import julis.wang.utils.StringUtils;
 import org.apache.http.util.TextUtils;
+import org.xml.sax.Attributes;
 
 /*******************************************************
  *
@@ -58,6 +59,11 @@ public class Solid extends BaseXml {
         @Override
         public void clearData() {
             StringUtils.clearObjectData(this);
+        }
+        @Override
+        public void analysisAttribute(Attributes attributes) {
+            Solid.getInstance().setChecked(true);
+            setColor(attributes.getValue("android:color"));
         }
     }
 }
