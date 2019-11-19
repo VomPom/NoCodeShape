@@ -26,13 +26,14 @@ import java.awt.event.ActionListener;
 
 public class NoShapeDialog extends JDialog {
     private OnClickListener onClickListener;
-    private JRadioButton rectangle, line, oval, ring;
+
     private JButton okButton;
     private JPanel contentPane;
 
     public JPanel gradientContainer, strokeContainer, cornersDetailContainer, cornersContainer, solidContainer;
 
-    private JComboBox functionComboBox;
+    public JComboBox functionComboBox;
+    public JRadioButton rectangle, line, oval, ring;
     public JComboBox cornersRadius, cornersTopLeft, cornersTopRight, cornersBottomLeft, cornersBottomRight;
     public JCheckBox strokeCheckBox, cornersCheckBox, cornerDetailCheckBox, sizeCheckBox, paddingCheckBox;
     public JComboBox strokeWidth, strokeDashGap, strokeDashWidth;
@@ -41,7 +42,7 @@ public class NoShapeDialog extends JDialog {
 
     public JTextField strokeColor, solidColor;
     public JTextField gradientEndColor, gradientCenterColor, gradientStartColor;
-
+    public ButtonGroup shapeButtonGroup = new ButtonGroup();
 
     private ShapeCheckListener shapeCheckListener = new ShapeCheckListener();
     private CheckBoxActionListener checkBoxActionListener = new CheckBoxActionListener(this);
@@ -139,7 +140,6 @@ public class NoShapeDialog extends JDialog {
      * init shape
      */
     private void initFunctions() {
-        ButtonGroup shapeButtonGroup = new ButtonGroup();
         shapeButtonGroup.add(rectangle);
         shapeButtonGroup.add(line);
         shapeButtonGroup.add(oval);
@@ -170,12 +170,16 @@ public class NoShapeDialog extends JDialog {
         });
 
     }
+
     /**
      * 对dialog初始化的数据进行展示Ω
      */
-    public void initData() {
-       ComponentValueHelper helper = new ComponentValueHelper(this);
-       helper.doCornersValue();
+    private void initData() {
+        ComponentValueHelper helper = new ComponentValueHelper(this);
+        helper.doCornersValue();
+        helper.doStrokeValue();
+        helper.doShapeValue();
+        helper.doSolidValue();
+        helper.doGradientValue();
     }
-
 }

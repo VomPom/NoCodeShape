@@ -54,7 +54,7 @@ public class Stroke extends BaseXml {
         String colorValue, dashWidthValue, dashGapValue, widthValue;
 
         public void setWidth(String width) {
-            this.widthValue = width;
+            this.widthValue = getValueOutUnit(width);
             this.width = getAttrWithUnitStr("width", width);
         }
 
@@ -64,13 +64,13 @@ public class Stroke extends BaseXml {
         }
 
         public void setDashWidth(String dashWidth) {
-            this.dashWidthValue = dashWidth;
+            this.dashWidthValue = getValueOutUnit(dashWidth);
             this.dashWidth = getAttrWithUnitStr("dashWidth", dashWidth);
 
         }
 
         public void setDashGap(String dashGap) {
-            this.dashGapValue = dashGap;
+            this.dashGapValue = getValueOutUnit(dashGap);
             this.dashGap = getAttrWithUnitStr("dashGap", dashGap);
         }
 
@@ -110,7 +110,5 @@ public class Stroke extends BaseXml {
             setWidth(attributes.getValue("android:width"));
             setDashWidth(attributes.getValue("android:dashWidth"));
         }
-
-
     }
 }

@@ -38,7 +38,12 @@ public class Solid extends BaseXml {
         if (TextUtils.isEmpty(builderStr)) {
             return "";
         }
-        return builderStr + getLineFeedString();
+        return getStartTag() + getLineFeedString() + builderStr + getCloser() + getLineFeedString();
+    }
+
+    @Override
+    public String getStartTag() {
+        return "\n\t<solid";
     }
 
     public Builder getBuilder() {
@@ -47,19 +52,27 @@ public class Solid extends BaseXml {
 
     public static class Builder extends BaseBuilder {
         String color;
+        String colorValue;
 
         public void setColor(String color) {
-            this.color = "\n\t<solid android:color=\"" + color + "\" />";
+            this.colorValue = color;
+            this.color = getAttrWithOutUnitStr("color", color);
+        }
+
+        public String getColorValue() {
+            return colorValue;
         }
 
         @Override
         public String getBuilderString() {
             return StringUtils.getString(color);
         }
+
         @Override
         public void clearData() {
             StringUtils.clearObjectData(this);
         }
+
         @Override
         public void analysisAttribute(Attributes attributes) {
             Solid.getInstance().setChecked(true);

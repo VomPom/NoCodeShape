@@ -19,4 +19,11 @@ public class ComboBoxChoiceComponent extends JComboBox {
         addItemListener(new ComboBoxMouseListener(noShapeDialog,this));
     }
 
+    @Override
+    public void addItem(Object item) {
+        super.addItem(item);
+    }
+    public void addItem(String item) {
+        super.addItem(item);
+    }
 }

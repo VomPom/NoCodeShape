@@ -90,7 +90,7 @@ public class Gradient extends BaseXml {
         }
 
         public void setGradientRadius(String gradientRadius) {
-            this.gradientRadiusValue = gradientRadius;
+            this.gradientRadiusValue = getValueOutUnit(gradientRadius);
             this.gradientRadius = getAttrWithUnitStr("gradientRadius", gradientRadius);
         }
 

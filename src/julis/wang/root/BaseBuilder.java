@@ -15,8 +15,11 @@ import org.xml.sax.Attributes;
 
 public abstract class BaseBuilder {
     public abstract String getBuilderString();
+
     public abstract void clearData();
+
     public abstract void analysisAttribute(Attributes attributes);
+
     protected final String getAttrWithUnitStr(String attributeType, String value) {
         String unit;
         if (TextUtils.isEmpty(value)) {
@@ -31,11 +34,16 @@ public abstract class BaseBuilder {
     }
 
     protected final String getAttrWithOutUnitStr(String attributeType, String value) {
-
         if (TextUtils.isEmpty(value)) {
             return "";
         }
+        return "android:" + attributeType + "=\"" + value + "\"";
+    }
 
-        return "android:" + attributeType + "=\"" + value  + "\"";
+    protected final String getValueOutUnit(String value) {
+        if (TextUtils.isEmpty(value)) {
+            return value;
+        }
+        return value.replace("dp", "").replace("px", "");
     }
 }

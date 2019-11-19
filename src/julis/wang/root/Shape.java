@@ -62,6 +62,7 @@ public class Shape extends BaseXml {
     public static class Builder extends BaseBuilder {
         private static final String DEFAULT = "\tandroid:shape=\"" + shapes[0] + "\"";
         String shape = DEFAULT;
+        int typeIndex;
 
         public void setShape(int type) {
             this.shape = "\tandroid:shape=\"" + shapes[type] + "\"";
@@ -72,6 +73,10 @@ public class Shape extends BaseXml {
                 return;
             }
             this.shape = "\tandroid:shape=\"" + type + "\"";
+        }
+
+        public int getTypeIndex() {
+            return typeIndex;
         }
 
         @Override
@@ -87,7 +92,17 @@ public class Shape extends BaseXml {
         @Override
         public void analysisAttribute(Attributes attributes) {
             String id = attributes.getValue("android:shape");
+            typeIndex = getShapeIndex(id);
             Shape.getInstance().getBuilder().setShape(id);
+        }
+
+        private int getShapeIndex(String shape) {
+            for (int i = 0; i < shapes.length; i++) {
+                if (shapes[i].equals(shape)) {
+                    return i;
+                }
+            }
+            return 0;
         }
     }
 

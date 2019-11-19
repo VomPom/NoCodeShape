@@ -61,28 +61,29 @@ public class Corners extends BaseXml {
     public static class Builder extends BaseBuilder {
         String radius, topLeftRadius, topRightRadius, bottomLeftRadius, bottomRightRadius;
         String radiusValue, topLeftRadiusValue, topRightRadiusValue, bottomLeftRadiusValue, bottomRightRadiusValue;
+
         public void setRadius(String radius) {
-            this.radiusValue = radius;
+            this.radiusValue = getValueOutUnit(radius);
             this.radius = getAttrWithUnitStr("radius", radius);
         }
 
         public void setTopLeftRadius(String topLeftRadius) {
-            this.topLeftRadiusValue = topLeftRadius;
+            this.topLeftRadiusValue = getValueOutUnit(topLeftRadius);
             this.topLeftRadius = getAttrWithUnitStr("topLeftRadius", topLeftRadius);
         }
 
         public void setTopRightRadius(String topRightRadius) {
-            this.topRightRadiusValue = topRightRadius;
+            this.topRightRadiusValue = getValueOutUnit(topRightRadius);
             this.topRightRadius = getAttrWithUnitStr("topRightRadius", topRightRadius);
         }
 
         public void setBottomLeftRadius(String bottomLeftRadius) {
-            this.bottomLeftRadiusValue = bottomLeftRadius;
+            this.bottomLeftRadiusValue = getValueOutUnit(bottomLeftRadius);
             this.bottomLeftRadius = getAttrWithUnitStr("bottomLeftRadius", bottomLeftRadius);
         }
 
         public void setBottomRightRadius(String bottomRightRadius) {
-            this.bottomRightRadiusValue = bottomRightRadius;
+            this.bottomRightRadiusValue = getValueOutUnit(bottomRightRadius);
             this.bottomRightRadius = getAttrWithUnitStr("bottomRightRadius", bottomRightRadius);
         }
 
