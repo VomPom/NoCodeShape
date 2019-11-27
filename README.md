@@ -1,7 +1,19 @@
 # NoCodeShape
 Android Studio 插件，能够快速帮你生成Shape文件，不用再手动去写shape相关的代码，简化操作。
 
-V1.0 功能
+项目介绍相关博客： [一款快速生成Android-shape的插件-NoCodeShape](https://julis.wang/2019/11/27/%E4%B8%80%E6%AC%BE%E5%BF%AB%E9%80%9F%E7%94%9F%E6%88%90Android-shape%E7%9A%84%E6%8F%92%E4%BB%B6-NoCodeShape/ "一款快速生成Android-shape的插件-NoCodeShape")
+
+# Demo
+ ![image]( https://github.com/VomPom/NoCodeShape/blob/master/demo.gif)
+
+
+**V1.1.0更新**
+
+1、在界面初始化后对原有数据清空处理
+
+2、对非xml文件进行判断处理
+
+**V1.0 功能**
 
 1、界面操作生成shape代码，现在支持 Solid、Corners、Stroke、Gradient
 
@@ -12,18 +24,14 @@ V1.0 功能
 
 
 
-下一步优化
+**下一步优化**
 
 1、对输入“闪跳”进行优化
 
 2、对一些操数值逻辑进行优化
 
-3、可以直接读取xml的内容，将其直接映射到界面，而不是每次清空
+3、交互体验优化
 
-4、交互体验优化
-
-# Demo
- ![image]( https://github.com/VomPom/NoCodeShape/blob/master/demo.gif)
 
 
 # MIT License
