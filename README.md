@@ -7,6 +7,8 @@ Android Studio 插件，能够快速帮你生成Shape文件，不用再手动去
  ![image]( https://github.com/VomPom/NoCodeShape/blob/master/demo.gif)
 
 
+# 更新记录
+
 **V1.1.0更新**
 
 1、在界面初始化后对原有数据清空处理
@@ -15,23 +17,13 @@ Android Studio 插件，能够快速帮你生成Shape文件，不用再手动去
 
 **V1.0 功能**
 
-1、界面操作生成shape代码，现在支持 Solid、Corners、Stroke、Gradient
+1、对于Color属性支持颜色选择器
 
-2、对于Color属性支持颜色选择器
+2、对于数量单位支持下拉选择
 
-3、对于数量单位支持下拉选择
+**V0.1 功能**
 
-
-
-
-**下一步优化**
-
-1、对输入“闪跳”进行优化
-
-2、对一些操数值逻辑进行优化
-
-3、交互体验优化
-
+界面操作生成shape代码，现在支持 Solid、Corners、Stroke、Gradient
 
 
 # MIT License
