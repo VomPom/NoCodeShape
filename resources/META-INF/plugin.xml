@@ -1,27 +1,24 @@
 <idea-plugin>
     <id>julis.wang.nocodeshape</id>
     <name>NoCodeShape</name>
-    <version>1.0</version>
+    <version>1.0.2</version>
 
     <vendor email="julis617669559@gmail.com" url="https://julis.wang">VomPom</vendor>
 
     <description><![CDATA[
-        A plugin to simplify generate Android shape xml, Needn't any code!
+        A plugin to simplify generate Android shape xml, needn't any code!
     ]]>
     </description>
 
     <change-notes><![CDATA[
-        V1.0
-        <li> 1、支持对原数据的状态记录，不会再清空原有数据</li>
-        
-       <li> 2、对数据支持默认单位dp
+        V1.0.2
+       <li>1. It supports the status record of the original data and will not empty the original data again</li>
+       <li>2. Support the default unit DP for data</li>
 
-        V0.1
-        <li>1、界面操作生成shape代码，现在支持 Solid、Corners、Stroke、Gradient</li>
-
-        <li>2、对于Color属性支持颜色选择器</li>
-
-        <li>3、对于数量单位支持下拉选择</li>
+       V1.0
+       <li>1. The interface operation generates shape code. Now it supports solid, cores, stroke and gradient</li>
+       <li>2. Support color selector for color attribute</li>
+       <li>3. For quantity unit, drop-down selection is supported</li>
     ]]>
     </change-notes>
 
