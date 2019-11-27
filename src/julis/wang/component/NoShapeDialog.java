@@ -51,8 +51,6 @@ public class NoShapeDialog extends JDialog {
         initNoShapeDialog();
         initFunctions();
         initAction();
-
-//        clearData();
         initData();
     }
 
@@ -122,18 +120,6 @@ public class NoShapeDialog extends JDialog {
         gradientContainer.setVisible(false);
         strokeContainer.setVisible(false);
         cornersContainer.setVisible(false);
-    }
-
-    private void clearData() {
-        Solid.getInstance().getBuilder().clearData();
-        Stroke.getInstance().getBuilder().clearData();
-        Corners.getInstance().getBuilder().clearData();
-        Gradient.getInstance().getBuilder().clearData();
-
-        Solid.getInstance().setChecked(false);
-        Stroke.getInstance().setChecked(false);
-        Corners.getInstance().setChecked(false);
-        Gradient.getInstance().setChecked(false);
     }
 
     /**

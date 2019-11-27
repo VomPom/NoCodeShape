@@ -10,7 +10,7 @@ package julis.wang.utils;
  *******************************************************/
 
 public class DefaultData {
-    public static final String TITLE = "No Shape Code v0.1";
+    public static final String TITLE = "No Shape Code v1.1.0";
     public static final String SOLID = "Solid";
     public static final String GRADIENT = "Gradient";
     public static final String UNIT = "dp";

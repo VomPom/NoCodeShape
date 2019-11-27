@@ -8,10 +8,12 @@ import com.intellij.openapi.command.WriteCommandAction;
 import com.intellij.openapi.editor.Document;
 import com.intellij.openapi.fileEditor.FileDocumentManager;
 import com.intellij.openapi.project.Project;
+import com.intellij.openapi.ui.Messages;
 import com.intellij.openapi.vfs.VirtualFile;
-import julis.wang.attribute.XMLString;
+import julis.wang.attribute.*;
 import julis.wang.component.NoShapeDialog;
 import julis.wang.findattribute.ShapeSaxHandler;
+import julis.wang.utils.StringUtils;
 import org.xml.sax.SAXException;
 
 import javax.xml.parsers.ParserConfigurationException;
@@ -36,6 +38,13 @@ public class NoCodeShapeAction extends AnAction {
         NoCodeShapeAction.event = event;
         project = getEventProject(event);
         file = event.getData(LangDataKeys.VIRTUAL_FILE);
+        if (!StringUtils.isXmlFile(file)) {
+            Messages.showMessageDialog("This file is not xml file !" +
+                            "Please do this operation in shape xml file",
+                    "NoCode Shape Warning", Messages.getInformationIcon());
+            return;
+        }
+        clearData();
         initSax();
         NoShapeDialog noShapeDialog = new NoShapeDialog();
         noShapeDialog.setOnClickListener(() -> {
@@ -86,7 +95,7 @@ public class NoCodeShapeAction extends AnAction {
         String text = FileDocumentManager.getInstance().getDocument(file).getText();
         ShapeSaxHandler handler = new ShapeSaxHandler();
         try {
-            handler.createViewList(text);
+            handler.createShapeAttributeList(text);
         } catch (ParserConfigurationException e) {
             e.printStackTrace();
         } catch (SAXException e) {
@@ -94,6 +103,18 @@ public class NoCodeShapeAction extends AnAction {
         } catch (IOException e) {
             e.printStackTrace();
         }
+    }
+
+    private void clearData() {
+        Solid.getInstance().getBuilder().clearData();
+        Stroke.getInstance().getBuilder().clearData();
+        Corners.getInstance().getBuilder().clearData();
+        Gradient.getInstance().getBuilder().clearData();
+
+        Solid.getInstance().setChecked(false);
+        Stroke.getInstance().setChecked(false);
+        Corners.getInstance().setChecked(false);
+        Gradient.getInstance().setChecked(false);
     }
 
 }

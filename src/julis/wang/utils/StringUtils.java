@@ -1,5 +1,6 @@
 package julis.wang.utils;
 
+import com.intellij.openapi.vfs.VirtualFile;
 import org.apache.http.util.TextUtils;
 
 import java.lang.reflect.Field;
@@ -42,7 +43,7 @@ public class StringUtils {
     }
 
     /**
-     *  替换字符串里最后出现的元素
+     * 替换字符串里最后出现的元素
      */
     private static String replaceLast(String text) {
         return text.replaceFirst("(?s)" + "\n" + "(?!.*?" + "\n" + ")", "");
@@ -74,5 +75,12 @@ public class StringUtils {
         }
     }
 
+    public static boolean isXmlFile(VirtualFile file) {
+        if (file == null) {
+            return false;
+        }
+        String fileName = file.getName();
+        return fileName.endsWith(".xml") || fileName.endsWith(".XML");
+    }
 
 }

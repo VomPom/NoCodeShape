@@ -41,7 +41,7 @@ public class ShapeSaxHandler extends DefaultHandler {
 
         ShapeSaxHandler handler = new ShapeSaxHandler();
         try {
-            handler.createViewList(str);
+            handler.createShapeAttributeList(str);
         } catch (ParserConfigurationException e) {
             e.printStackTrace();
         } catch (SAXException e) {
@@ -56,7 +56,7 @@ public class ShapeSaxHandler extends DefaultHandler {
 //        }
     }
 
-    public void createViewList(String string) throws ParserConfigurationException, SAXException, IOException {
+    public void createShapeAttributeList(String string) throws ParserConfigurationException, SAXException, IOException {
         InputStream xmlStream = new ByteArrayInputStream(string.getBytes("UTF-8"));
         SAXParserFactory factory = SAXParserFactory.newInstance();
         SAXParser parser = factory.newSAXParser();
@@ -93,17 +93,6 @@ public class ShapeSaxHandler extends DefaultHandler {
             default:
                 break;
         }
-
-//        if (qName.equals("stroke")) {
-//            String id = attributes.getValue("android:id");
-//            if (id != null) {
-//                ShapePart shapePart = new ShapePart();
-//                shapePart.setType(qName);
-//                shapePart.setId(id.replace("@+id/", "").replace("@id/", "")
-//                        .replace("@android:id/", ""));
-//                shapePartList.add(shapePart);
-//            }
-//        }
 
     }
 
