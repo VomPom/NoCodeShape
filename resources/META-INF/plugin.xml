@@ -1,7 +1,7 @@
 <idea-plugin>
     <id>julis.wang.nocodeshape</id>
     <name>NoCodeShape</name>
-    <version>1.1.0</version>
+    <version>1.2.0</version>
 
     <vendor email="julis617669559@gmail.com" url="https://julis.wang">VomPom</vendor>
 
@@ -11,17 +11,21 @@
     </description>
 
     <change-notes><![CDATA[
-         V1.1.0
-       <li>Clear data before show operation dialog</li>
+        V1.2.0
+        <li>1、Fix can't run on lower Java environment 11, thanks a lot that one friend had help me to find this bug.</li>
+
+        V1.1.0
+        <li>1、Clear data before show operation dialog.</li>
+        <li>2、Judge the file if it's a xml file.</li>
 
         V1.0.2
-       <li>1. It supports the status record of the original data and will not empty the original data again</li>
+       <li>1. It supports the status record of the original data and will not empty the original data again.</li>
        <li>2. Support the default unit DP for data.</li>
 
        V1.0
-       <li>1. The interface operation generates shape code. Now it supports solid, corners, stroke and gradient</li>
-       <li>2. Support color selector for color attribute</li>
-       <li>3. For quantity unit, drop-down selection is supported</li>
+       <li>1. The interface operation generates shape code. Now it supports solid, corners, stroke and gradient.</li>
+       <li>2. Support color selector for color attribute.</li>
+       <li>3. For quantity unit, drop-down selection is supported.</li>
     ]]>
     </change-notes>
 

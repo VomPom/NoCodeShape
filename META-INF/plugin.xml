@@ -1,7 +1,7 @@
 <idea-plugin>
   <id>julis.wang.nocodeshape</id>
   <name>NoCodeShape</name>
-  <version>1.1.0</version>
+  <version>1.2.0</version>
 
   <vendor email="julis617669559@gmail.com" url="https://julis.wang">VomPom</vendor>
 
@@ -11,6 +11,9 @@
   </description>
 
   <change-notes><![CDATA[
+        V1.2.0
+        <li>1、Fix can't run on lower Java environment 11, thanks a lot that one friend had help me to find this bug.</li>
+
         V1.1.0
         <li>1、Clear data before show operation dialog.</li>
         <li>2、Judge the file if it's a xml file.</li>
